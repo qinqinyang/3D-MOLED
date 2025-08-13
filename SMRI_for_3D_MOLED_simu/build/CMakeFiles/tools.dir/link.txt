@@ -1,0 +1,1 @@
+/home/yqq/Downloads/gcc/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libtools.so -o libtools.so CMakeFiles/tools.dir/src/tools.cpp.o   -L/home/yqq/Env/MATLAB/bin/glnxa64 

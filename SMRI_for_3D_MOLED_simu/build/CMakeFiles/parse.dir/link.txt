@@ -1,0 +1,1 @@
+/home/yqq/Downloads/gcc/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libparse.so -o libparse.so CMakeFiles/parse.dir/src/parse.cpp.o   -L/home/yqq/Env/MATLAB/bin/glnxa64 

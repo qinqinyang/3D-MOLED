@@ -1,0 +1,887 @@
+The system is: Linux - 6.8.0-52-generic - x86_64
+Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Tue_Jun_13_19:16:58_PDT_2023
+Cuda compilation tools, release 12.2, V12.2.91
+Build cuda_12.2.r12.2/compiler.32965470_0
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+Compiler: /usr/local/cuda-12.2/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+0
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/usr/local/cuda-12.2/bin
+#$ _THERE_=/usr/local/cuda-12.2/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/usr/local/cuda-12.2/bin/..
+#$ NVVMIR_LIBRARY_DIR=/usr/local/cuda-12.2/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/usr/local/cuda-12.2/bin/../lib:/home/yqq/Downloads/gcc/lib/:/usr/local/cuda-12.2/lib64:/home/yqq/Downloads/gcc/lib/:/usr/local/cuda-12.2/lib64:
+#$ PATH=/usr/local/cuda-12.2/bin/../nvvm/bin:/usr/local/cuda-12.2/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+#$ INCLUDES="-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+#$ cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+#$ ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+#$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+#$ gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" 
+#$ nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"
+#$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+#$ gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda-12.2/bin/crt/link.stub" -o "tmp/a_dlink.o" 
+#$ g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" 
+
+
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+
+The CUDA compiler identification is NVIDIA, found in "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/a.out"
+
+Parsed CUDA nvcc implicit link information from above output:
+  found 'PATH=' string: [/usr/local/cuda-12.2/bin/../nvvm/bin:/usr/local/cuda-12.2/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin]
+  found 'LIBRARIES=' string: ["-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+  considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda-12.2/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+  considering line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/home/yqq/Downloads/gcc/bin/g++]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib] ==> dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+  collapse library dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit objs: []
+  implicit dirs: [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs;/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Parsed CUDA nvcc include information from above output:
+  found 'PATH=' string: [/usr/local/cuda-12.2/bin/../nvvm/bin:/usr/local/cuda-12.2/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/home/yqq/Downloads/gcc/bin:/home/yqq/Downloads/gcc/lib64:/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin:/home/yqq/Env/MATLAB/bin/:/usr/local/cuda-12.2/bin:/home/yqq/Env/anaconda3/bin:/home/yqq/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin]
+  found 'LIBRARIES=' string: ["-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+  considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "gcc"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=91 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/usr/local/cuda-12.2/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+  considering line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    extracted link line: [g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/home/yqq/Downloads/gcc/bin/g++]
+  found 'INCLUDES=' string: ["-I/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include"  ]
+
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs]
+    arg [-L/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib] ==> dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+  collapse library dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/lib] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit objs: []
+  implicit dirs: [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs;/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+  implicit fwks: []
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/yqq/Downloads/gcc/bin/g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdCXX/a.out"
+
+Detecting CUDA compiler ABI info compiled with the following output:
+Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ead10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ead10.dir/build.make CMakeFiles/cmTC_ead10.dir/build
+gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o
+/usr/local/cuda-12.2/bin/nvcc -forward-unknown-to-host-compiler   --generate-code=arch=compute_52,code=[compute_52,sm_52]   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -E -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/ -dumpbase tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include
+ /usr/local/include
+ /home/yqq/Downloads/gcc/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -E -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/ -dumpbase tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include
+ /usr/local/include
+ /home/yqq/Downloads/gcc/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.'
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0006cbf2_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_ead10.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -version -o /tmp/ccsg1czT.s
+GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include
+ /usr/local/include
+ /home/yqq/Downloads/gcc/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 18c116871b202ee03ce4f1a0df268a38
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/'
+ as -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o /tmp/ccsg1czT.s
+GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.'
+Linking CUDA executable cmTC_ead10
+/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ead10.dir/link.txt --verbose=1
+/home/yqq/Downloads/gcc/bin/g++  -v CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -o cmTC_ead10  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-12.2/targets/x86_64-linux/lib"
+Using built-in specs.
+COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++
+COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ead10' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ead10.'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccO6rpLO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ead10 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs -L/usr/local/cuda-12.2/targets/x86_64-linux/lib -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ead10' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ead10.'
+gmake[1]: Leaving directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CUDA implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+    add: [/usr/local/include]
+    add: [/home/yqq/Downloads/gcc/include]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/include]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0/x86_64-pc-linux-gnu]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0/backward]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/home/yqq/Downloads/gcc/include] ==> [/home/yqq/Downloads/gcc/include]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/cuda-12.2/targets/x86_64-linux/include;/home/yqq/Downloads/gcc/include/c++/12.3.0;/home/yqq/Downloads/gcc/include/c++/12.3.0/x86_64-pc-linux-gnu;/home/yqq/Downloads/gcc/include/c++/12.3.0/backward;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include;/usr/local/include;/home/yqq/Downloads/gcc/include;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CUDA implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ead10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ead10.dir/build.make CMakeFiles/cmTC_ead10.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CUDA object CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [/usr/local/cuda-12.2/bin/nvcc -forward-unknown-to-host-compiler   --generate-code=arch=compute_52 code=[compute_52 sm_52]   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/']
+  ignore line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -E -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/ -dumpbase tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yqq/Downloads/gcc/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0006cbf2_00000000-7_CMakeCUDACompilerABI.cpp1.']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/']
+  ignore line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -E -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=91 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii -m64 -mtune=generic -march=x86-64 -dumpdir /tmp/ -dumpbase tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yqq/Downloads/gcc/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=91' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-mtune=generic' '-march=x86-64' '-dumpdir' '/tmp/tmpxft_0006cbf2_00000000-5_CMakeCUDACompilerABI.cpp4.']
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/']
+  ignore line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -quiet -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_0006cbf2_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_ead10.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -m64 -mtune=generic -march=x86-64 -version -o /tmp/ccsg1czT.s]
+  ignore line: [GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yqq/Downloads/gcc/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 18c116871b202ee03ce4f1a0df268a38]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/']
+  ignore line: [ as -v -I /usr/local/cuda-12.2/bin/../targets/x86_64-linux/include --64 -o CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o /tmp/ccsg1czT.s]
+  ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/usr/local/cuda-12.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.']
+  ignore line: [Linking CUDA executable cmTC_ead10]
+  ignore line: [/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ead10.dir/link.txt --verbose=1]
+  ignore line: [/home/yqq/Downloads/gcc/bin/g++  -v CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -o cmTC_ead10  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-12.2/targets/x86_64-linux/lib"]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ead10' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs' '-L/usr/local/cuda-12.2/targets/x86_64-linux/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ead10.']
+  link line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccO6rpLO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ead10 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs -L/usr/local/cuda-12.2/targets/x86_64-linux/lib -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccO6rpLO.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ead10] ==> ignore
+    arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+    arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o]
+    arg [-L/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs] ==> dir [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs]
+    arg [-L/usr/local/cuda-12.2/targets/x86_64-linux/lib] ==> dir [/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..]
+    arg [CMakeFiles/cmTC_ead10.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o]
+    arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs]
+  collapse library dir [/usr/local/cuda-12.2/targets/x86_64-linux/lib] ==> [/usr/local/cuda-12.2/targets/x86_64-linux/lib]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> [/home/yqq/Downloads/gcc/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> [/home/yqq/Downloads/gcc/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/local/cuda-12.2/targets/x86_64-linux/lib/stubs;/usr/local/cuda-12.2/targets/x86_64-linux/lib;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0;/home/yqq/Downloads/gcc/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/home/yqq/Downloads/gcc/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b1362/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b1362.dir/build.make CMakeFiles/cmTC_b1362.dir/build
+gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o
+/home/yqq/Downloads/gcc/bin/g++   -v -o CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b1362.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccZdXKjX.s
+GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include
+ /usr/local/include
+ /home/yqq/Downloads/gcc/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 18c116871b202ee03ce4f1a0df268a38
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/'
+ as -v --64 -o CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZdXKjX.s
+GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_b1362
+/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1362.dir/link.txt --verbose=1
+/home/yqq/Downloads/gcc/bin/g++  -v CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b1362 
+Using built-in specs.
+COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++
+COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b1362' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b1362.'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cck7o0N6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b1362 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b1362' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b1362.'
+gmake[1]: Leaving directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+    add: [/usr/local/include]
+    add: [/home/yqq/Downloads/gcc/include]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0/x86_64-pc-linux-gnu]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward] ==> [/home/yqq/Downloads/gcc/include/c++/12.3.0/backward]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/home/yqq/Downloads/gcc/include] ==> [/home/yqq/Downloads/gcc/include]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/home/yqq/Downloads/gcc/include/c++/12.3.0;/home/yqq/Downloads/gcc/include/c++/12.3.0/x86_64-pc-linux-gnu;/home/yqq/Downloads/gcc/include/c++/12.3.0/backward;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include;/usr/local/include;/home/yqq/Downloads/gcc/include;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b1362/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b1362.dir/build.make CMakeFiles/cmTC_b1362.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/yqq/Downloads/gcc/bin/g++   -v -o CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/']
+  ignore line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b1362.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccZdXKjX.s]
+  ignore line: [GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../include/c++/12.3.0/backward]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yqq/Downloads/gcc/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 18c116871b202ee03ce4f1a0df268a38]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZdXKjX.s]
+  ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_b1362]
+  ignore line: [/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1362.dir/link.txt --verbose=1]
+  ignore line: [/home/yqq/Downloads/gcc/bin/g++  -v CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b1362 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/yqq/Downloads/gcc/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b1362' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b1362.']
+  link line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cck7o0N6.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b1362 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cck7o0N6.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b1362] ==> ignore
+    arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+    arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..]
+    arg [CMakeFiles/cmTC_b1362.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o]
+    arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> [/home/yqq/Downloads/gcc/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> [/home/yqq/Downloads/gcc/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0;/home/yqq/Downloads/gcc/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/home/yqq/Downloads/gcc/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/yqq/Downloads/gcc/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/3.24.0/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ba2f0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ba2f0.dir/build.make CMakeFiles/cmTC_ba2f0.dir/build
+gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o
+/home/yqq/Downloads/gcc/bin/gcc   -v -o CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/home/yqq/Downloads/gcc/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ba2f0.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccZnFDka.s
+GNU C17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include
+ /usr/local/include
+ /home/yqq/Downloads/gcc/include
+ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 12.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 4c7c0ec99d21447be3a937400fcd9cc7
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/'
+ as -v --64 -o CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o /tmp/ccZnFDka.s
+GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_ba2f0
+/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba2f0.dir/link.txt --verbose=1
+/home/yqq/Downloads/gcc/bin/gcc  -v CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -o cmTC_ba2f0 
+Using built-in specs.
+COLLECT_GCC=/home/yqq/Downloads/gcc/bin/gcc
+COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --disable-checking --enable-languages=c,c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 12.3.0 (GCC) 
+COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba2f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ba2f0.'
+ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNR9du2.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba2f0 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba2f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ba2f0.'
+gmake[1]: Leaving directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+    add: [/usr/local/include]
+    add: [/home/yqq/Downloads/gcc/include]
+    add: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/home/yqq/Downloads/gcc/include] ==> [/home/yqq/Downloads/gcc/include]
+  collapse include dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include;/usr/local/include;/home/yqq/Downloads/gcc/include;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ba2f0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ba2f0.dir/build.make CMakeFiles/cmTC_ba2f0.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/yqq/Downloads/gcc/bin/gcc   -v -o CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -c /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/yqq/Downloads/gcc/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/']
+  ignore line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/yqq/Env/cmake-3.24.0-linux-x86_64/share/cmake-3.24/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ba2f0.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccZnFDka.s]
+  ignore line: [GNU C17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yqq/Downloads/gcc/include]
+  ignore line: [ /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 12.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 4c7c0ec99d21447be3a937400fcd9cc7]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o /tmp/ccZnFDka.s]
+  ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_ba2f0]
+  ignore line: [/home/yqq/Env/cmake-3.24.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba2f0.dir/link.txt --verbose=1]
+  ignore line: [/home/yqq/Downloads/gcc/bin/gcc  -v CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -o cmTC_ba2f0 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/yqq/Downloads/gcc/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --disable-checking --enable-languages=c c++ --disable-multilib --prefix=/home/yqq/Downloads/gcc --enable-threads=posix]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 12.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba2f0' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ba2f0.']
+  link line: [ /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2 -plugin /home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so -plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNR9du2.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba2f0 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../.. CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/yqq/Downloads/gcc/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNR9du2.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ba2f0] ==> ignore
+    arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+    arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..]
+    arg [CMakeFiles/cmTC_ba2f0.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o] ==> obj [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o]
+    arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0] ==> [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../../../lib64] ==> [/home/yqq/Downloads/gcc/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/../../..] ==> [/home/yqq/Downloads/gcc/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtbegin.o;/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/home/yqq/Downloads/gcc/lib/gcc/x86_64-pc-linux-gnu/12.3.0;/home/yqq/Downloads/gcc/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/home/yqq/Downloads/gcc/lib]
+  implicit fwks: []
+
+

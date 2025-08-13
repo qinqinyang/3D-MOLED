@@ -1,0 +1,1 @@
+/home/yqq/Downloads/gcc/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libmacMgr.so -o libmacMgr.so CMakeFiles/macMgr.dir/src/MacMgr.cpp.o   -L/home/yqq/Env/MATLAB/bin/glnxa64 

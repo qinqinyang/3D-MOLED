@@ -1,0 +1,63 @@
+{
+    "RFInterval": 20e-6,
+    "ShiftUseBlipT": true,
+    "TR": 0.0883,
+    "DummyScan": 10,
+    "Shiftrewind": 216,
+    "RF1": {
+        "MiddleStamp": 0.0,
+        "RfFlipAngle": 10,
+        "RfDt": 0.0005,
+        "RfPhase": 0,
+        "RfFreq": 1.5707963267948966
+    },
+    "ShiftG1": {
+        "MiddleStamp": 0.0025,
+        "Duration": 0.001,
+        "XGradient": 56,
+        "YGradient": -56,
+        "ZGradient": 0
+    },
+    "RF2": {
+        "MiddleStamp": 0.0045,
+        "RfFlipAngle": 10,
+        "RfDt": 0.0005,
+        "RfPhase": 0,
+        "RfFreq": 1.5707963267948966
+    },
+    "ShiftG2": {
+        "MiddleStamp": 0.0070,
+        "Duration": 0.0005,
+        "XGradient": 56,
+        "YGradient": -56,
+        "ZGradient": 0
+    },
+    "RF3": {
+        "MiddleStamp": 0.0090,
+        "RfFlipAngle": 10,
+        "RfDt": 0.0005,
+        "RfPhase": 0,
+        "RfFreq": 1.5707963267948966
+    },
+    "ShiftG3": {
+        "MiddleStamp": 0.011,
+        "Duration": 0.0005,
+        "XGradient": 52,
+        "YGradient": -56,
+        "ZGradient": 0
+    },
+    "ShotNum": 8,
+    "ETL": 27,
+    "Slices": 110,
+    "SamplingRate": 1,
+    "LastRelaxTime": 0.01373,
+    "LastRelaxTime2": 0.0023,
+    "MotionFlag": false,
+    "ShiftGraFlag":true,
+    "XMinShiftGra":-0.05,
+    "XMaxShiftGra":0.05,
+    "YMinShiftGra":-0.05,
+    "YMaxShiftGra":0.05,
+    "ZMinShiftGra":0,
+    "ZMaxShiftGra":0
+}

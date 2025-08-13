@@ -1,0 +1,1 @@
+/home/yqq/Downloads/gcc/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libbaseSeq.so -o libbaseSeq.so CMakeFiles/baseSeq.dir/src/BaseSeq.cpp.o   -L/home/yqq/Env/MATLAB/bin/glnxa64  -Wl,-rpath,/home/yqq/Env/MATLAB/bin/glnxa64:/home/yqq/data_uci/code_SMRI/SMRI_V2_3_2_yqq/build libtools.so libparse.so 

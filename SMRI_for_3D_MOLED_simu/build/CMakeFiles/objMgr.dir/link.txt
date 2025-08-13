@@ -1,0 +1,1 @@
+/home/yqq/Downloads/gcc/bin/g++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libobjMgr.so -o libobjMgr.so CMakeFiles/objMgr.dir/src/ObjMgr.cpp.o   -L/home/yqq/Env/MATLAB/bin/glnxa64  -Wl,-rpath,/home/yqq/Env/MATLAB/bin/glnxa64 -lmat 
