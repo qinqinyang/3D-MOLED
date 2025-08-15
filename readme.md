@@ -18,6 +18,10 @@ Rapid whole-brain T2* and susceptibility mapping using 3D multiple overlapping-e
 
 **FSL** version 6.0.3 (FMRIB Software Library; https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases).
 
+## Virtual Imaging Objects & Simulation Data 
+
+![Results](./figs/results.gif)
+
 ## Code Directory Overview
 
 `code_t2star_QSM_process` : 3D-GRE T2star & QSM Processing — includes core processing pipelines as well as post-processing steps such as mask extraction and image registration.
