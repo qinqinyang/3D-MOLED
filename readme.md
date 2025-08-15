@@ -38,5 +38,6 @@ For detailed usage and configuration instructions, please refer to the internal 
 `tools` : Required MATLAB Toolboxes and Libraries: including NIfTI reading, STISuite, image display, synthetic data reading, etc.
 
 ## Virtual Imaging Objects & Simulation Data 
+**The parameter mapping of 3D-MOLED relies on synthetic data–driven deep learning. In this work, a set of 3D virtual phantoms was synthesized for Bloch simulation, generating high-resolution simulated data that closely approximate real data.**
 
 ![VObj](./figs/Figure2.png)
