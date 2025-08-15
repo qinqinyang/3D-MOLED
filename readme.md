@@ -18,7 +18,7 @@ Rapid whole-brain T2* and susceptibility mapping using 3D multiple overlapping-e
 
 **FSL** version 6.0.3 (FMRIB Software Library; https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases).
 
-## Virtual Imaging Objects & Simulation Data 
+## 3D-MOLED --> T2star map & QSM
 
 ![Results](./figs/results.gif)
 
